@@ -31,7 +31,13 @@ jobs:
         run: pnpm run build
 
       - name: List dist contents
-        run: ls -la dist/
+        run: |
+          echo "=== dist folder contents ==="
+          ls -la dist/
+          echo "=== dist/assets contents ==="
+          ls -la dist/assets/
+          echo "=== index.html ==="
+          cat dist/index.html
 
       - name: Deploy to gh-pages branch
         uses: peaceiris/actions-gh-pages@v4
