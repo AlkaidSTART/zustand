@@ -14,7 +14,6 @@ export default function Hello() {
   return (
     <div className="container mx-auto mt-20">
       <h1 className="text-5xl font-bold mt-10">当前计数： {bear.bears}</h1>
-      <p className="text-center text-gray-500 mt-2">测试部署 - 调试中</p>
       
       {/* 颜色切换按钮组 */}
       <div className="flex justify-center items-center gap-4 mt-8">

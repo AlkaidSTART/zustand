@@ -1,12 +1,8 @@
+@import "tailwindcss";
 @import "tw-animate-css";
-@import "shadcn/tailwind.css";
 @import "@fontsource-variable/geist";
 
-@tailwind base;
-
 @custom-variant dark (&:is(.dark *));
-@tailwind components;
-@tailwind utilities;
 
 :root {
   font-synthesis: none;
@@ -139,4 +135,27 @@ body {
   html {
     @apply font-sans;
   }
+}
+
+/* 确保颜色类被包含 */
+@source "./src/components/hello.tsx";
+
+/* 手动添加 safelist */
+@utility bg-red-500 {
+  background-color: #ef4444;
+}
+@utility bg-red-600 {
+  background-color: #dc2626;
+}
+@utility bg-green-500 {
+  background-color: #22c55e;
+}
+@utility bg-green-600 {
+  background-color: #16a34a;
+}
+@utility bg-blue-500 {
+  background-color: #3b82f6;
+}
+@utility bg-blue-600 {
+  background-color: #2563eb;
 }
